@@ -10,7 +10,7 @@ $.fn.extend({
 // Слайдер "Ближайшие мероприятия"
 $(".events-closest_js").slick({
   fade: true,
-  autoplay: true,
+  autoplay: false,
   speed: 1000,
   nextArrow: $(".events-slider-next_js"),
   prevArrow: $(".events-slider-prev_js"),
@@ -146,10 +146,13 @@ $(document).ready(function () {
 // Кнопка "показать еще на главной"
 $(document).ready(function(){
   $(".feedbacks_item-wrapper").slice(0,3).show();
+  if($(".feedbacks_item-wrapper:hidden").length === 0){
+    $(".loadMore_js").hide();
+  }
   $(".loadMore_js").click(function(e){
     e.preventDefault();
     $(".feedbacks_item-wrapper:hidden").slice(0,1).fadeIn("slow");
-    if($(".feedbacks_item-wrapper:hidden").length == 0){
+    if($(".feedbacks_item-wrapper:hidden").length === 0){
        $(".loadMore_js").hide();
     }
   });
