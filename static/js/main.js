@@ -157,3 +157,23 @@ $(document).ready(function(){
     }
   });
 });
+
+
+$(document).ready(function () {
+  $(".select-controller").each(function () {
+    const $wrapper = $(this),
+      $select = $wrapper.find(".custom-select");
+    $select
+      .select2({
+        dropdownParent: $wrapper,
+        minimumResultsForSearch: -1,
+        width: 'element',
+      })
+      .on("select2:open", function (e) {
+        $wrapper
+          .find(".select2-dropdown")
+          .addClass("animate__animated animate__fadeIn");
+      });
+  });
+});
+

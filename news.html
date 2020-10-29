@@ -10,6 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="static/css/main.css">
   </head>
   <body>
@@ -31,21 +33,42 @@
         <h1 class="font-size--80 heading-title--mb40">Новости</h1>
       </div>
       <div class="container">
-        <div class="filters-container"><span class="filter-title">Показывать</span>
-          <select class="filters-select--ml" name="select">Показывать
-            <option selected>Все месяцы</option>
-            <option>Январь</option>
-            <option>Февраль</option>
-            <option>Март</option>
-            <option>Апрель</option>
-          </select>
-          <select class="filters-select--ml" name="select">
-            <option selected>Все месяцы</option>
-            <option>Январь</option>
-            <option>Февраль</option>
-            <option>Март</option>
-            <option>Апрель</option>
-          </select>
+        <div class="filters-container"><span class="filters-title">Показывать</span>
+          <div class="filters-wrapper">
+            <div class="select-controller">
+              <select class="custom-select">
+                <option>Все месяцы</option>
+                <option value="Январь">Январь</option>
+                <option value="Февраль">Февраль</option>
+                <option value="Март">Март</option>
+                <option value="Апрель">Апрель</option>
+                <option value="Май">Май</option>
+                <option value="Июнь">Июнь</option>
+                <option value="Июль">Июль</option>
+                <option value="Август">Август</option>
+                <option value="Сентябрь">Сентябрь</option>
+                <option value="Октябрь">Октябрь</option>
+                <option value="Ноябрь">Ноябрь</option>
+                <option value="Декабрь">Декабрь</option>
+              </select>
+            </div>
+          </div>
+          <div class="filters-wrapper">
+            <div class="select-controller">
+              <select class="custom-select">
+                <option>Все года</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
       <div class="container"> 
@@ -77,10 +100,14 @@
       </div>
       <div class="container"> 
         <div class="pagination-wrapper">
-          <div class="pagination"><a class="pagination_item" href="#"><svg width="14" height="24" viewBox="0 0 14 24" fill="none">
+          <div class="pagination"><a class="pagination_item" href="#"><svg viewBox="0 0 612 612" width="20px" height="25px" y="0px" x="0px">
+<path d="M124.172,305.975L342.365,87.781c20.079-20.079,20.079-52.644,0-72.722c-20.079-20.079-52.644-20.079-72.723,0L15.062,269.639c-20.079,20.079-20.079,52.644,0,72.723l254.58,254.58c20.079,20.078,52.644,20.078,72.723,0c20.079-20.079,20.079-52.644,0-72.723L124.172,305.975z M431.395,305.694l165.371-165.982c20.308-20.359,20.308-53.408,0-73.768c-20.309-20.359-53.204-20.359-73.513,0L321.139,268.823c-20.309,20.359-17.047,35.266,3.032,55.345L523.253,545.47c20.309,20.359,53.204,20.359,73.513,0c20.308-20.359,20.308-53.408,0-73.768L431.395,305.694z"/>
+</svg></a><a class="pagination_item" href="#"><svg width="14" height="24" viewBox="0 0 14 24" fill="none">
 <path d="M0.940121 13.0429C0.354335 12.4571 0.354335 11.5074 0.940121 10.9216L10.4861 1.37564C11.0718 0.78985 12.0216 0.78985 12.6074 1.37564C13.1932 1.96142 13.1932 2.91117 12.6074 3.49696L4.1221 11.9822L12.6074 20.4675C13.1932 21.0533 13.1932 22.0031 12.6074 22.5888C12.0216 23.1746 11.0718 23.1746 10.4861 22.5888L0.940121 13.0429ZM2.80078 13.4822H2.00078V10.4822H2.80078V13.4822Z" fill="black"/>
 </svg></a><a class="pagination_item" href="#">1</a><a class="pagination_item--active pagination_item" href="#">2</a><a class="pagination_item" href="#">3</a><a class="pagination_item" href="#">4</a><span class="pagination_item pagination_item--show-more">...</span><a class="pagination_item" href="#"><svg width="14" height="24" viewBox="0 0 14 24" fill="none">
 <path d="M13.0599 13.0429C13.6457 12.4571 13.6457 11.5074 13.0599 10.9216L3.51394 1.37564C2.92815 0.78985 1.9784 0.78985 1.39262 1.37564C0.80683 1.96142 0.80683 2.91117 1.39262 3.49696L9.8779 11.9822L1.39262 20.4675C0.80683 21.0533 0.80683 22.0031 1.39262 22.5888C1.9784 23.1746 2.92815 23.1746 3.51394 22.5888L13.0599 13.0429ZM11.1992 13.4822H11.9992V10.4822H11.1992V13.4822Z" fill="black"/>
+</svg></a><a class="pagination_item" href="#"><svg width="20" height="25" viewBox="0 0 612.02 612.02">
+<path d="M596.96,269.674L342.381,15.094c-20.079-20.079-52.644-20.079-72.723,0c-20.079,20.079-20.079,52.644,0,72.723     L487.852,306.01L269.658,524.202c-20.079,20.079-20.079,52.644,0,72.723s52.644,20.079,72.723,0L596.96,342.346C617.039,322.317,617.039,289.753,596.96,269.674z M290.858,254.258L88.744,41.238c-20.309-21.378-53.204-21.378-73.513,0s-20.309,56.058,0,77.462l165.371,174.289L15.231,467.278c-20.309,21.379-20.309,56.083,0,77.462s53.204,21.379,73.513,0L290.858,331.72C311.167,310.342,311.167,275.662,290.858,254.258z"/>
 </svg></a></div>
         </div>
       </div>
@@ -101,6 +128,7 @@
       </div>
     </footer>
     <script src="static/js/libs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="static/js/main.js"></script>
   </body>
 </html>
