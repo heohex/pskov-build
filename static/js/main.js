@@ -1,4 +1,4 @@
-"use strict";
+
 
 // Патчим Jquery
 $.fn.extend({
@@ -59,13 +59,13 @@ $spickersSlider.on("init reInit afterChange", function (
   currentSlide,
   nextSlide
 ) {
-  var i = (currentSlide ? currentSlide : 0) + 1;
+  const i = (currentSlide ? currentSlide : 0) + 1;
 
   $currentSlide.text(i);
   $allSlides.text(`/${slick.slideCount}`);
 });
 
-$(".spickers-slider").slick({
+$spickersSlider.slick({
   fade: false,
   autoplay: true,
   speed: 1000,
@@ -80,15 +80,19 @@ $(".spickers-slider").slick({
 // Слайдер "Партнеры"
 // Слайдер "Партнеры"
 const $partnersSlider = $(".partners-slider");
+const $partnersSlide  = $(".partners-slide");
 
-function initEmptySlide() {
+//общая функция вычисления размера
+function initEmptySlide(slidesCollection, slidenumber = 0) {
   const margin = $(".container")[0].getClientRects()[0].x;
-  $(".partners-slide")
-    .eq(0)
-    .css("margin-left", Math.floor(margin) - 10);
+  slidesCollection
+    .eq(slidenumber)
+    .css("margin-left", Math.floor(margin) + 20);
 }
+
+//реагируем на изменения экрана, но нужно было сделать через debounce
 $(window).resize(function () {
-  initEmptySlide();
+  initEmptySlide($partnersSlide);
 });
 
 function setProgress(next, all) {
@@ -104,22 +108,21 @@ $partnersSlider.on("init reInit afterChange", function (
   currentSlide,
   nextSlide
 ) {
-  var i = (currentSlide ? currentSlide : 0) + 1;
+  const i = (currentSlide ? currentSlide : 0) + 1;
   setProgress(i, slick.slideCount);
 });
 
 $(document).ready(function () {
-  initEmptySlide();
+  initEmptySlide($partnersSlide);
   $partnersSlider.slick({
     dots: false,
     focusOnSelect: false,
     infinite: false,
     variableWidth: true,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: $(".partners-slider-prev_js"),
     nextArrow: $(".partners-slider-next_js"),
-    infinite: false,
     responsive: [
       {
         breakpoint: 991,
@@ -159,6 +162,7 @@ $(document).ready(function(){
 });
 
 
+// красивые селекты
 $(document).ready(function () {
   $(".select-controller").each(function () {
     const $wrapper = $(this),
@@ -177,3 +181,235 @@ $(document).ready(function () {
   });
 });
 
+// ОБРАБОТКА ВИДЕО С ЮТУБА НАЧАЛО
+$(document).ready(function () {
+  $('.js-videoWrapper').each(function (index,item) {
+    const iframe = $(item).find('.js-videoIframe');
+    const embedCode = youtubeUrlParse(iframe.data('origin'));
+    $(this).find('button').css('background-image', `url(https://img.youtube.com/vi/${embedCode}/maxresdefault.jpg)`);
+    const youtubeLink = `https://www.youtube.com/embed/${embedCode}?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white`;
+    $(this).find('.js-videoIframe').data('src', youtubeLink);
+  })
+})
+
+function youtubeUrlParse(url){
+  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match&&match[7].length===11)? match[7] : false;
+}
+
+$(document).on('click','.js-videoPoster',function(e) {
+  //отменяем стандартное действие button
+  e.preventDefault();
+  const poster = $(this);
+  // ищем родителя ближайшего по классу
+  const wrapper = poster.closest('.js-videoWrapper');
+  videoPlay(wrapper);
+});
+
+//вопроизводим видео, при этом скрывая постер
+function videoPlay(wrapper) {
+  const iframe = wrapper.find('.js-videoIframe');
+  // Берем ссылку видео из data
+  const src = iframe.data('src');
+  // скрываем постер
+  wrapper.addClass('videoWrapperActive');
+  // подставляем в src параметр из data
+  iframe.attr('src',src);
+}
+
+// ОБРАБОТКА ВИДЕО С ЮТУБА КОНЕЦ
+
+
+//СЛАЙДЕР С ВИДЕО
+const $contentSlider = $(".content-slider");
+const $contentSlide = $(".content-slider_slide");
+
+
+$(window).resize(function () {
+  initEmptySlide($contentSlide);
+});
+
+
+$contentSlider.on("init", function (e, slick) {
+  const current = $(this).find('div.slick-slide').eq(0);
+  current.find('.content-slider_slide').css({'width':'650px', 'height': '500px'})
+});
+
+$contentSlider.on("beforeChange", function (event, slick, prevSlide, nextSlide) {
+  if (prevSlide < nextSlide && prevSlide !== nextSlide){
+    const slide = $(this).find('div.slick-slide').eq(nextSlide);
+    slide.find('.content-slider_slide').css({'width': '650px', 'height': '500px'});
+    initEmptySlide($contentSlide, nextSlide);
+  } else if (prevSlide > nextSlide && prevSlide !== nextSlide){
+    const slide = $(this).find('div.slick-slide').eq(prevSlide);
+    slide.find('.content-slider_slide').css({'width': '', 'height': '', 'margin-left': ''});
+  }
+});
+
+$(document).ready(function () {
+  initEmptySlide($contentSlide);
+  $contentSlider.slick({
+    dots: false,
+    focusOnSelect: false,
+    infinite: false,
+    variableWidth: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: $contentSlider.next().find('.controllers_left'),
+    nextArrow: $contentSlider.next().find('.controllers_right'),
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
+          infinite: true,
+        },
+      },
+    ],
+  });
+});
+
+
+// ЗУМ КАРТИНОК НАЧАЛО
+
+const bg_color_img_box = 'rgba(0,0,0,0.9)';
+const allow_hide_scroll_img_box = 'yes';
+const use_fade_inout_img_box = 'yes';
+const speed_img_box = 0.08;
+const z_index_dv_img_box = 999;
+let vopa_img_box, idpopup_img_box
+
+window.onload = function() {
+  const crtdv_img_box = document.createElement('div');
+  crtdv_img_box.id = 'img_box';
+  document.getElementsByTagName('body')[0].appendChild(crtdv_img_box)
+  idpopup_img_box = document.getElementById("img_box")
+  idpopup_img_box.style.top = 0
+  idpopup_img_box.style.left = 0
+  idpopup_img_box.style.opacity = 0
+  idpopup_img_box.style.width = '100%'
+  idpopup_img_box.style.height = '100%'
+  idpopup_img_box.style.display = 'none'
+  idpopup_img_box.style.position = 'fixed'
+  idpopup_img_box.style.cursor = 'zoom-out'
+  idpopup_img_box.style.textAlign = 'center'
+  idpopup_img_box.style.zIndex = z_index_dv_img_box
+  idpopup_img_box.style.backgroundColor = bg_color_img_box
+}
+
+function img_box(self) {
+  var namepic_img_box = typeof self === 'string' ? self : self.src
+  vopa_img_box = 0
+  var hwin_img_box = window.innerHeight
+  var wwin_img_box = window.innerWidth
+  var himg_img_box, padtop_img_box, idfadein_img_box
+  var img_img_box = new Image()
+  img_img_box.src = namepic_img_box
+  img_img_box.onload = function() {
+    himg_img_box = img_img_box.height
+    wimg_img_box = img_img_box.width
+    idpopup_img_box.innerHTML = '<img src=' + namepic_img_box + '>'
+
+    if (wimg_img_box > wwin_img_box) {
+      idpopup_img_box.getElementsByTagName('img')[0].style.width = '90%'
+    }
+    else if (himg_img_box > hwin_img_box) {
+      idpopup_img_box.getElementsByTagName('img')[0].style.height = '90%'
+      himg_img_box = hwin_img_box * 90 / 100
+    }
+
+    if (himg_img_box < hwin_img_box) {
+      padtop_img_box = (hwin_img_box / 2) - (himg_img_box / 2)
+      idpopup_img_box.style.paddingTop = padtop_img_box + 'px'
+    }
+    else {
+      idpopup_img_box.style.paddingTop = '0px'
+    }
+
+    if (allow_hide_scroll_img_box === 'yes') {
+      document.body.style.overflow = 'hidden'
+    }
+    idpopup_img_box.style.display = 'block'
+  }
+
+  if (use_fade_inout_img_box === 'yes') {
+    idfadein_img_box = setInterval(function() {
+      if (vopa_img_box <= 1.1) {
+        idpopup_img_box.style.opacity = vopa_img_box
+        vopa_img_box += speed_img_box
+      }
+      else {
+        idpopup_img_box.style.opacity = 1
+        clearInterval(idfadein_img_box)
+      }
+    }, 10)
+  }
+  else {
+    idpopup_img_box.style.opacity = 1
+  }
+
+  idpopup_img_box.onclick = function() {
+    if (use_fade_inout_img_box == 'yes') {
+      var idfadeout_img_box = setInterval(function() {
+        if (vopa_img_box >= 0) {
+          idpopup_img_box.style.opacity = vopa_img_box
+          vopa_img_box -= speed_img_box
+        } else {
+          idpopup_img_box.style.opacity = 0
+          clearInterval(idfadeout_img_box)
+          idpopup_img_box.style.display = 'none'
+          idpopup_img_box.innerHTML = ''
+          document.body.style.overflow = 'visible'
+          vopa_img_box = 0
+        }
+      }, 10)
+    }
+    else {
+      idpopup_img_box.style.opacity = 0
+      idpopup_img_box.style.display = 'none'
+      idpopup_img_box.innerHTML = ''
+      document.body.style.overflow = 'visible'
+    }
+  }
+}
+
+$('.zoom-image').on('click', function () {
+  img_box(this);
+});
+
+// ЗУМ КАРТИНОК КОНЕЦ
+
+// ТАБЫ НАЧАЛО
+$(document).ready(function(){
+  $('.tab-link').click(function(){
+    const tab_id = $(this).attr('data-tab');
+    $('.tab-link').removeClass('tab-link--current form-switchers--active');
+    $('.tab-content').removeClass('tab-content--current');
+    $(this).addClass('tab-link--current form-switchers--active');
+    $("#"+tab_id).addClass('tab-content--current');
+  })
+
+})
+// ТАБЫ КОНЕЦ
+
+
+// реагируем на выбор файла в инпут
+$('.custom-file-upload input').on('change', function () {
+  if ($(this).prop('files').length > 0) {
+    $(this).parent().find('span').text($(this).prop('files')[0].name)
+  } else {
+    $(this).parent().find('span').text('Прикрепить презентацию')
+  }
+})
