@@ -2,7 +2,7 @@
 <html lang="ru-Ru">
   <head>
     <meta charset="utf-8">
-    <title> Страница новостей
+    <title> Страница мероприятий
     </title>
     <meta name="description" content="описание страницы отзывов">
     <meta name="keywords" content="ключи страницы отзывов">
@@ -30,13 +30,13 @@
     <main> 
       <div class="breadcrumbs"><a class="link breadcrumbs_link" href="#">Главная </a><span class="breadcrumbs_separator">•</span><a class="link breadcrumbs_link" href="#">Следующая</a><span class="breadcrumbs_separator">•</span><span class="breadcrumbs_link--last">Последняя в цепочке</span></div>
       <div class="container">
-        <h1 class="font-size--80 heading-title--mb40">Новости</h1>
+        <h1 class="font-size--80 heading-title--mb40">Мероприятия</h1>
       </div>
       <div class="container">
         <div class="filters-container"><span class="filters-title">Показывать</span>
           <div class="filters-wrapper">
             <div class="select-controller">
-              <select class="custom-select" data-type="months">
+              <select class="custom-select" data-type="month">
                 <option value="0">Все месяцы</option>
                 <option value="1">Январь</option>
                 <option value="2">Февраль</option>
@@ -55,50 +55,96 @@
           </div>
           <div class="filters-wrapper">
             <div class="select-controller">
-              <select class="custom-select" data-type="years">
-                <option value="0">Все года</option>
-                <option value="1">2012</option>
-                <option value="2">2013</option>
-                <option value="3">2014</option>
-                <option value="4">2015</option>
-                <option value="5">2016</option>
-                <option value="6">2017</option>
-                <option value="7">2018</option>
-                <option value="8">2019</option>
-                <option value="9">2020</option>
+              <select class="custom-select time-select" data-type="times">
+                <option value="0">Все</option>
+                <option value="1">Только предстоящие</option>
+                <option value="2">Только прошедшие</option>
               </select>
             </div>
           </div>
         </div>
       </div>
-      <div class="container"> 
-        <div class="news-block"><a class="news-card" href="#"><img src="static/img/news1.png">
-            <div class="news-card_block">
-              <div class="news-card_block-date">11/09</div>
-              <div class="news-card_block-title">В школах Псковской области стартовали Дни экологии</div><svg width="63" height="38" viewBox="0 0 63 38" fill="none">
-<path d="M61.7678 20.7678C62.7441 19.7915 62.7441 18.2085 61.7678 17.2322L45.8579 1.32233C44.8816 0.34602 43.2986 0.34602 42.3223 1.32233C41.346 2.29864 41.346 3.88155 42.3223 4.85786L56.4645 19L42.3223 33.1421C41.346 34.1184 41.346 35.7014 42.3223 36.6777C43.2986 37.654 44.8816 37.654 45.8579 36.6777L61.7678 20.7678ZM0 21.5L60 21.5V16.5L0 16.5L0 21.5Z" fill="black"/>
-</svg>
-            </div></a><a class="news-card" href="#"><img src="static/img/news1.png">
-            <div class="news-card_block">
-              <div class="news-card_block-date">11/09</div>
-              <div class="news-card_block-title">В школах Псковской области стартовали Дни экологии</div><svg width="63" height="38" viewBox="0 0 63 38" fill="none">
-<path d="M61.7678 20.7678C62.7441 19.7915 62.7441 18.2085 61.7678 17.2322L45.8579 1.32233C44.8816 0.34602 43.2986 0.34602 42.3223 1.32233C41.346 2.29864 41.346 3.88155 42.3223 4.85786L56.4645 19L42.3223 33.1421C41.346 34.1184 41.346 35.7014 42.3223 36.6777C43.2986 37.654 44.8816 37.654 45.8579 36.6777L61.7678 20.7678ZM0 21.5L60 21.5V16.5L0 16.5L0 21.5Z" fill="black"/>
-</svg>
-            </div></a><a class="news-card" href="#"><img src="static/img/news1.png">
-            <div class="news-card_block">
-              <div class="news-card_block-date">11/09</div>
-              <div class="news-card_block-title">В школах Псковской области стартовали Дни экологии</div><svg width="63" height="38" viewBox="0 0 63 38" fill="none">
-<path d="M61.7678 20.7678C62.7441 19.7915 62.7441 18.2085 61.7678 17.2322L45.8579 1.32233C44.8816 0.34602 43.2986 0.34602 42.3223 1.32233C41.346 2.29864 41.346 3.88155 42.3223 4.85786L56.4645 19L42.3223 33.1421C41.346 34.1184 41.346 35.7014 42.3223 36.6777C43.2986 37.654 44.8816 37.654 45.8579 36.6777L61.7678 20.7678ZM0 21.5L60 21.5V16.5L0 16.5L0 21.5Z" fill="black"/>
-</svg>
-            </div></a><a class="news-card" href="#"><img src="static/img/news3.png">
-            <div class="news-card_block">
-              <div class="news-card_block-date">11/09</div>
-              <div class="news-card_block-title">В школах Псковской области стартовали Дни экологии</div><svg width="63" height="38" viewBox="0 0 63 38" fill="none">
-<path d="M61.7678 20.7678C62.7441 19.7915 62.7441 18.2085 61.7678 17.2322L45.8579 1.32233C44.8816 0.34602 43.2986 0.34602 42.3223 1.32233C41.346 2.29864 41.346 3.88155 42.3223 4.85786L56.4645 19L42.3223 33.1421C41.346 34.1184 41.346 35.7014 42.3223 36.6777C43.2986 37.654 44.8816 37.654 45.8579 36.6777L61.7678 20.7678ZM0 21.5L60 21.5V16.5L0 16.5L0 21.5Z" fill="black"/>
-</svg>
-            </div></a></div>
+      <div class="container">
+        <div class="events-list-block">
+          <div class="event-item">
+            <div class="event-item_img">
+              <div class="event-item_block" style="background-color: #EFE500"><img src="static/img/volume.svg">
+                <div class="event-item_block-title">Псковский международный медиафорум</div>
+              </div><img src="static/img/12.png">
+            </div>
+            <div class="event-item_descr">
+              <div class="event-item_title">Псковский международный медиафорум</div>
+              <div class="event-item_about">
+                <div class="event-item_about-type">Онлайн-форум</div>
+                <div class="event-item_about-date">3-4 декабря</div>
+              </div>
+              <div class="event-item_info">
+                <p>Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе.</p>
+                <p>Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе.</p>
+              </div>
+              <div class="event-item_actions"><a class="action" href="#">Подробнее</a></div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-item_img">
+              <div class="event-item_block" style="background-color: #F49ED7"><img src="static/img/money.svg">
+                <div class="event-item_block-title">Московский экономический форум</div>
+              </div><img src="static/img/12.png">
+            </div>
+            <div class="event-item_descr">
+              <div class="event-item_title">Псковский международный медиафорум</div>
+              <div class="event-item_about">
+                <div class="event-item_about-type">Онлайн-форум</div>
+                <div class="event-item_about-date">3-4 декабря</div>
+              </div>
+              <div class="event-item_info">
+                <p>Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе.</p>
+                <p>Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе.</p>
+              </div>
+              <div class="event-item_actions"><a class="action" href="#">Подробнее</a></div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-item_img">
+              <div class="event-item_block" style="background-color: #42FFBB"><img src="static/img/lightning.svg">
+                <div class="event-item_block-title">Инновационный форум энергетики и связи</div>
+              </div><img src="static/img/12.png">
+            </div>
+            <div class="event-item_descr">
+              <div class="event-item_title">Псковский международный медиафорум</div>
+              <div class="event-item_about">
+                <div class="event-item_about-type">Онлайн-форум</div>
+                <div class="event-item_about-date">3-4 декабря</div>
+              </div>
+              <div class="event-item_info">
+                <p>Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе.</p>
+                <p>Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе.</p>
+              </div>
+              <div class="event-item_actions"><a class="action" href="#">Подробнее</a></div>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-item_img">
+              <div class="event-item_block" style="background-color: #42B4FF"><img src="static/img/microscope.svg">
+                <div class="event-item_block-title">Всероссийский общественно-научный форум</div>
+              </div><img src="static/img/12.png">
+            </div>
+            <div class="event-item_descr">
+              <div class="event-item_title">Всероссийский общественно-научный форум</div>
+              <div class="event-item_about">
+                <div class="event-item_about-type">Онлайн-форум</div>
+                <div class="event-item_about-date">3-4 декабря</div>
+              </div>
+              <div class="event-item_info">
+                <p>Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе.</p>
+                <p>Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе.</p>
+              </div>
+              <div class="event-item_actions"><a class="action" href="#">Подробнее</a></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container"> 
+      <div class="container">
         <div class="pagination-wrapper">
           <div class="pagination"><a class="pagination_item" href="#"><svg viewBox="0 0 612 612" width="20px" height="25px" y="0px" x="0px">
 <path d="M124.172,305.975L342.365,87.781c20.079-20.079,20.079-52.644,0-72.722c-20.079-20.079-52.644-20.079-72.723,0L15.062,269.639c-20.079,20.079-20.079,52.644,0,72.723l254.58,254.58c20.079,20.078,52.644,20.078,72.723,0c20.079-20.079,20.079-52.644,0-72.723L124.172,305.975z M431.395,305.694l165.371-165.982c20.308-20.359,20.308-53.408,0-73.768c-20.309-20.359-53.204-20.359-73.513,0L321.139,268.823c-20.309,20.359-17.047,35.266,3.032,55.345L523.253,545.47c20.309,20.359,53.204,20.359,73.513,0c20.308-20.359,20.308-53.408,0-73.768L431.395,305.694z"/>

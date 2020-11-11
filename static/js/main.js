@@ -181,6 +181,30 @@ $(document).ready(function () {
   });
 });
 
+
+$('.custom-select').on("select2:selecting",function(e){
+  if($(this).data('type')) {
+    const currentHref = location.href;
+    const url = new URL(`${currentHref}`);
+    url.searchParams.set($(this).data('type'), e.params.args.data.id);
+    window.location.href = url.href;
+  }
+});
+
+$(document).ready(function () {
+    if(location.search) {
+      const queryDict = {}
+      //берем с урла параметры если они есть и записываем в объект
+      location.search.substr(1).split("&").forEach(function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]});
+      for (let prop in queryDict) {
+        // если есть селект, то сетим ему значение
+        if($(`select[data-type=${prop}]`)) {
+          $(`select[data-type=${prop}]`).val(`${queryDict[prop]}`).trigger('change');
+        }
+      }
+    }
+});
+
 // ОБРАБОТКА ВИДЕО С ЮТУБА НАЧАЛО
 $(document).ready(function () {
   $('.js-videoWrapper').each(function (index,item) {
