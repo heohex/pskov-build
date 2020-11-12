@@ -1,5 +1,4 @@
 
-
 // Патчим Jquery
 $.fn.extend({
   toggleText: function (a, b) {
@@ -424,10 +423,8 @@ $(document).ready(function(){
     $(this).addClass('tab-link--current form-switchers--active');
     $("#"+tab_id).addClass('tab-content--current');
   })
-
 })
 // ТАБЫ КОНЕЦ
-
 
 // реагируем на выбор файла в инпут
 $('.custom-file-upload input').on('change', function () {
@@ -436,4 +433,81 @@ $('.custom-file-upload input').on('change', function () {
   } else {
     $(this).parent().find('span').text('Прикрепить презентацию')
   }
+})
+
+// рэйтинг
+
+$('.rating svg').on('click', function () {
+
+  const self = $(this);
+  const $parent = self.parent();
+
+  if ($parent.data('vote') !== 1) {
+
+  // id тыкнутой звезды(комментария)
+  const id = $parent.data('rating');
+  // счетчик тыкнутой звезды
+  let counter = +$parent.children('.rating-counter').text() || 0;
+  // отправляемые данные
+  const data = JSON.stringify({id: id});
+    $.ajax({
+      url: 'https://jsonplaceholder.typicode.com/posts',
+      type: "GET",
+      data: data
+    }).done(function (res) {
+      $parent.data('vote', 1)
+      $parent.toggleClass('rating--active');
+      $parent.children('.rating-counter').text(counter + 1)
+    });
+  }
+});
+
+// Задать вопрос форма
+$('.question-form').on('submit',function (e) {
+  e.preventDefault();
+  const $textarea = $(this).find('textarea');
+
+  if(!$textarea.val().trim()){
+    $textarea.parent().addClass('is-invalid');
+    setTimeout(() => $textarea.parent().removeClass('is-invalid'), 2000);
+    return
+  }
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    type: "POST",
+    data: 'data'
+  }).done(function (res) {
+    $('.question-modalJS').fadeIn();
+    $textarea.val('');
+  });
+});
+
+// Участвовать как спикер
+$('.contestUsSpeakerJS').on('click', function () {
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    type: "POST",
+    data: 'data'
+  }).done(function (res) {
+    $('.congratulation-modalJS').fadeIn()
+  });
+});
+
+// Участвовать как слушатель
+$('.contestUsListenerJS').on('click', function () {
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    type: "POST",
+    data: 'data'
+  }).done(function (res) {
+    $('.congratulation-modalJS').fadeIn();
+  });
+});
+
+$('.modal-close').on('click', function () {
+  $(this).closest('.modal-wrapper').fadeOut();
+})
+
+$('.modal-content_actions-buttonJS').on('click', function () {
+  $(this).closest('.modal-wrapper').fadeOut();
 })

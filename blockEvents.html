@@ -36,17 +36,18 @@
         </div>
       </div>
       <div class="breadcrumbs"><a class="link breadcrumbs_link" href="#">Главная </a><span class="breadcrumbs_separator">•</span><a class="link breadcrumbs_link" href="#">Следующая</a><span class="breadcrumbs_separator">•</span><span class="breadcrumbs_link--last">Последняя в цепочке</span></div>
-      <div class="container">
+      <section>
         <div class="event">
           <div class="event_location event_location--firstpath">
             <div class="event_location-item">22 февраля</div>
             <div class="event_location-item">10:30</div>
-          </div><img class="event_img" src="static/img/helmet.png">
+          </div>
+          <div class="event_container"><img class="event_img" src="static/img/helmet.png"></div>
           <div class="event_location event_location--secondpath">
             <div class="event_location-item">ул.Советская д.21 ауд.5</div>
           </div>
         </div>
-      </div>
+      </section>
       <section class="heading-block heading-block--margin">
         <p class="heading_pretitle">Всероссийский общественно-научный форум</p>
         <h1 class="font-size--100 heading-title--mb40">«Дихотомия войны и мира: приграничные регионы в переломные исторические эпохи»</h1>
@@ -179,13 +180,35 @@
 </svg></a></div><a class="privacy-police link" href="#">Политика конфиденциальности</a>
         </div>
       </div>
-    </footer><template id="template-dropbox-paper">
-<div class="paper-wrapper">
-<section class="paper-main" data-zoom-close>
-<div class="paper-container" data-zoom-container></div>
-</section>
-</div>
-</template>
+    </footer>
+    <div class="modal-wrapper congratulation-modalJS">
+      <div class="modal-container">
+        <div class="modal-close"><span>&#10006;</span></div>
+        <div class="modal-content">
+          <div class="modal-content_title">
+            <h1 class="font-size--45"> Поздравляем!</h1>
+          </div>
+          <div class="modal-content_description">Вы записались на участие в этом событии. Все события вы можете просмотреть в личном кабинете.</div>
+          <div class="modal-content_actions">
+            <button class="action modal-content_actions-button modal-content_actions-buttonJS">Понятно</button><a class="link modal-content_actions-link" href="#">перейти в личный кабинет</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrapper question-modalJS">
+      <div class="modal-container">
+        <div class="modal-close"><span>&#10006;</span></div>
+        <div class="modal-content">
+          <div class="modal-content_title">
+            <h1 class="font-size--45"> Отправлен!</h1>
+          </div>
+          <div class="modal-content_description">Ваш вопрос появится после модерации.</div>
+          <div class="modal-content_actions">
+            <button class="action modal-content_actions-button modal-content_actions-buttonJS">Понятно</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="static/js/libs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="static/js/main.js"></script>
