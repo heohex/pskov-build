@@ -419,7 +419,7 @@ $(document).ready(function(){
   $('.tab-link').click(function(){
     const tab_id = $(this).attr('data-tab');
     $('.tab-link').removeClass('tab-link--current form-switchers--active');
-    $('.tab-content').removeClass('tab-content--current');
+    $('.tab-content').removeClass('tab-content--cur');
     $(this).addClass('tab-link--current form-switchers--active');
     $("#"+tab_id).addClass('tab-content--current');
   })
@@ -436,7 +436,6 @@ $('.custom-file-upload input').on('change', function () {
 })
 
 // рэйтинг
-
 $('.rating svg').on('click', function () {
 
   const self = $(this);
@@ -511,3 +510,23 @@ $('.modal-close').on('click', function () {
 $('.modal-content_actions-buttonJS').on('click', function () {
   $(this).closest('.modal-wrapper').fadeOut();
 })
+
+
+// табы на моих событиях
+$(document).ready(function(){
+  $('.tab-link').click(function(){
+    const tab_id = $(this).attr('data-tab');
+    $('.tab-link').removeClass('tab-link--current events-switcher_link--active');
+    $('.tab-content').removeClass('tab-content--current');
+    $(this).addClass('tab-link--current events-switcher_link--active');
+    $("#"+tab_id).addClass('tab-content--current');
+  })
+})
+
+
+
+
+
+
+
+

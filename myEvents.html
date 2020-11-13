@@ -33,55 +33,229 @@
         <h1 class="font-size--80 heading-title--mb40">Мои события</h1>
       </div>
       <div class="container">
-        <div class="coming-events">
+        <div class="events-switcher">
+          <div class="events-switcher_link events-switcher_link--active tab-link tab-link--current" data-tab="tab-1">Предстоящие</div>
+          <div class="events-switcher_link tab-link" data-tab="tab-2">Архив</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="coming-events tab-content tab-content--current" id="tab-1">
           <ul class="timeline">
             <li class="timeline__line"></li>
             <li class="timeline__item">
               <div class="timeline__item-info">
                 <div class="timeline__item-dot"></div>
-                <h2 class="font-size--45">22 февраля</h2>
+                <h2 class="font-size--45">22 февраля 2020</h2>
               </div>
-              <div class="timeline__item-content" style="background-color: #42FFBB">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</div>
+              <div class="timeline__item-content" style="background-color: #42B4FF">
+                <div class="timeline__item-wrapper">
+                  <div class="timeline__item-lside"><img src="static/img/volume.svg">
+                    <div class="timeline__item-lside_title">Псковский международный медиафорум</div>
+                  </div>
+                  <div class="timeline__item-rside"><a class="link timeline__item-rside_title" href="#">Псковский экономический форум</a>
+                    <div class="timeline__item-rside_time"><img src="static/img/clock.png">10:30-11:30</div>
+                    <div class="timeline__item-rside_info">
+                      <div class="timeline__item-rside_type">Онлайн-форум</div>
+                      <div class="timeline__item-rside_moderate">Модерирует: Иван Иванов</div>
+                    </div>
+                    <div class="timeline__item-rside_descr">Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе. Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным.</div><a class="link timeline__item-rside_link" href="#">
+                      Ссылка на трансляцию<svg width="21" height="24" viewBox="0 0 21 24" fill="none">
+<path d="M20.5607 13.0607C21.1464 12.4749 21.1464 11.5251 20.5607 10.9393L11.0147 1.3934C10.4289 0.807611 9.47919 0.807611 8.8934 1.3934C8.30761 1.97919 8.30761 2.92893 8.8934 3.51472L17.3787 12L8.8934 20.4853C8.30761 21.0711 8.30761 22.0208 8.8934 22.6066C9.47919 23.1924 10.4289 23.1924 11.0147 22.6066L20.5607 13.0607ZM0.5 13.5H19.5V10.5H0.5V13.5Z" fill="black"/>
+</svg></a>
+                  </div>
+                </div>
+                <div class="timeline__item-reminder">
+                  <svg width="23" height="16" viewBox="0 0 23 16" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.07062 12.7279L0 5.65693L2.82843 2.82851L9.89923 9.89931L19.7986 0L22.627 2.82843L12.7279 12.728L9.89951 15.5564L9.89905 15.5563L7.07062 12.7279Z" fill="black"/>
+</svg>Я спикер
+                </div>
+              </div>
+              <div class="timeline__item-content" style="background-color: #42FFBB">
+                <div class="timeline__item-wrapper">
+                  <div class="timeline__item-lside"><img src="static/img/volume.svg">
+                    <div class="timeline__item-lside_title">Псковский международный медиафорум</div>
+                  </div>
+                  <div class="timeline__item-rside"><a class="link timeline__item-rside_title" href="#">Псковский экономический форум</a>
+                    <div class="timeline__item-rside_time"><img src="static/img/clock.png">10:30-11:30</div>
+                    <div class="timeline__item-rside_info">
+                      <div class="timeline__item-rside_type">Онлайн-форум</div>
+                      <div class="timeline__item-rside_moderate">Модерирует: Иван Иванов</div>
+                    </div>
+                    <div class="timeline__item-rside_descr">Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе. Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным.</div><a class="link timeline__item-rside_link" href="#">
+                      Ссылка на трансляцию<svg width="21" height="24" viewBox="0 0 21 24" fill="none">
+<path d="M20.5607 13.0607C21.1464 12.4749 21.1464 11.5251 20.5607 10.9393L11.0147 1.3934C10.4289 0.807611 9.47919 0.807611 8.8934 1.3934C8.30761 1.97919 8.30761 2.92893 8.8934 3.51472L17.3787 12L8.8934 20.4853C8.30761 21.0711 8.30761 22.0208 8.8934 22.6066C9.47919 23.1924 10.4289 23.1924 11.0147 22.6066L20.5607 13.0607ZM0.5 13.5H19.5V10.5H0.5V13.5Z" fill="black"/>
+</svg></a>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="timeline__item">
               <div class="timeline__item-info">
                 <div class="timeline__item-dot"></div>
-                <h2 class="font-size--45">12 марта</h2>
+                <h2 class="font-size--45">12 марта 2020</h2>
               </div>
-              <div class="timeline__item-content" style="background-color: #FFE601">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</div>
+              <div class="timeline__item-content" style="background-color: #FFE601">
+                <div class="timeline__item-wrapper">
+                  <div class="timeline__item-lside"><img src="static/img/volume.svg">
+                    <div class="timeline__item-lside_title">Псковский международный медиафорум</div>
+                  </div>
+                  <div class="timeline__item-rside"><a class="link timeline__item-rside_title" href="#">Псковский экономический форум</a>
+                    <div class="timeline__item-rside_time"><img src="static/img/clock.png">10:30-11:30</div>
+                    <div class="timeline__item-rside_info">
+                      <div class="timeline__item-rside_type">Онлайн-форум</div>
+                      <div class="timeline__item-rside_moderate">Модерирует: Иван Иванов</div>
+                    </div>
+                    <div class="timeline__item-rside_descr">Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе. Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным.</div><a class="link timeline__item-rside_link" href="#">
+                      Ссылка на трансляцию<svg width="21" height="24" viewBox="0 0 21 24" fill="none">
+<path d="M20.5607 13.0607C21.1464 12.4749 21.1464 11.5251 20.5607 10.9393L11.0147 1.3934C10.4289 0.807611 9.47919 0.807611 8.8934 1.3934C8.30761 1.97919 8.30761 2.92893 8.8934 3.51472L17.3787 12L8.8934 20.4853C8.30761 21.0711 8.30761 22.0208 8.8934 22.6066C9.47919 23.1924 10.4289 23.1924 11.0147 22.6066L20.5607 13.0607ZM0.5 13.5H19.5V10.5H0.5V13.5Z" fill="black"/>
+</svg></a>
+                  </div>
+                </div>
+                <div class="timeline__item-reminder">
+                  <svg width="23" height="16" viewBox="0 0 23 16" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.07062 12.7279L0 5.65693L2.82843 2.82851L9.89923 9.89931L19.7986 0L22.627 2.82843L12.7279 12.728L9.89951 15.5564L9.89905 15.5563L7.07062 12.7279Z" fill="black"/>
+</svg>Я спикер
+                </div>
+              </div>
             </li>
             <li class="timeline__item">
               <div class="timeline__item-info">
                 <div class="timeline__item-dot"></div>
-                <h2 class="font-size--45">10 апреля</h2>
+                <h2 class="font-size--45">10 апреля 2020</h2>
               </div>
-              <div class="timeline__item-content" style="background-color: #F49ED7">Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim.</div>
+              <div class="timeline__item-content" style="background-color: #F49ED7">
+                <div class="timeline__item-wrapper">
+                  <div class="timeline__item-lside"><img src="static/img/volume.svg">
+                    <div class="timeline__item-lside_title">Псковский международный медиафорум</div>
+                  </div>
+                  <div class="timeline__item-rside"><a class="link timeline__item-rside_title" href="#">Псковский экономический форум</a>
+                    <div class="timeline__item-rside_time"><img src="static/img/clock.png">10:30-11:30</div>
+                    <div class="timeline__item-rside_info">
+                      <div class="timeline__item-rside_type">Онлайн-форум</div>
+                      <div class="timeline__item-rside_moderate">Модерирует: Иван Иванов</div>
+                    </div>
+                    <div class="timeline__item-rside_descr">Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе. Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным.</div><a class="link timeline__item-rside_link" href="#">
+                      Ссылка на трансляцию<svg width="21" height="24" viewBox="0 0 21 24" fill="none">
+<path d="M20.5607 13.0607C21.1464 12.4749 21.1464 11.5251 20.5607 10.9393L11.0147 1.3934C10.4289 0.807611 9.47919 0.807611 8.8934 1.3934C8.30761 1.97919 8.30761 2.92893 8.8934 3.51472L17.3787 12L8.8934 20.4853C8.30761 21.0711 8.30761 22.0208 8.8934 22.6066C9.47919 23.1924 10.4289 23.1924 11.0147 22.6066L20.5607 13.0607ZM0.5 13.5H19.5V10.5H0.5V13.5Z" fill="black"/>
+</svg></a>
+                  </div>
+                </div>
+                <div class="timeline__item-reminder">
+                  <svg width="23" height="16" viewBox="0 0 23 16" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.07062 12.7279L0 5.65693L2.82843 2.82851L9.89923 9.89931L19.7986 0L22.627 2.82843L12.7279 12.728L9.89951 15.5564L9.89905 15.5563L7.07062 12.7279Z" fill="black"/>
+</svg>Я спикер
+                </div>
+              </div>
             </li>
           </ul>
         </div>
-        <div class="past-events">
+        <div class="past-events tab-content" id="tab-2">
           <ul class="timeline">
             <li class="timeline__line"></li>
             <li class="timeline__item">
               <div class="timeline__item-info">
                 <div class="timeline__item-dot"></div>
-                <h2 class="font-size--45">22 февраля</h2>
+                <h2 class="font-size--45">22 февраля 2020</h2>
               </div>
-              <div class="timeline__item-content" style="background-color: #42FFBB">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</div>
+              <div class="timeline__item-content" style="background-color: #42B4FF">
+                <div class="timeline__item-wrapper">
+                  <div class="timeline__item-lside"><img src="static/img/volume.svg">
+                    <div class="timeline__item-lside_title">Псковский международный медиафорум</div>
+                  </div>
+                  <div class="timeline__item-rside"><a class="link timeline__item-rside_title" href="#">Псковский экономический форум</a>
+                    <div class="timeline__item-rside_time"><img src="static/img/clock.png">10:30-11:30</div>
+                    <div class="timeline__item-rside_info">
+                      <div class="timeline__item-rside_type">Онлайн-форум</div>
+                      <div class="timeline__item-rside_moderate">Модерирует: Иван Иванов</div>
+                    </div>
+                    <div class="timeline__item-rside_descr">Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе. Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным.</div><a class="link timeline__item-rside_link" href="#">
+                      Ссылка на трансляцию<svg width="21" height="24" viewBox="0 0 21 24" fill="none">
+<path d="M20.5607 13.0607C21.1464 12.4749 21.1464 11.5251 20.5607 10.9393L11.0147 1.3934C10.4289 0.807611 9.47919 0.807611 8.8934 1.3934C8.30761 1.97919 8.30761 2.92893 8.8934 3.51472L17.3787 12L8.8934 20.4853C8.30761 21.0711 8.30761 22.0208 8.8934 22.6066C9.47919 23.1924 10.4289 23.1924 11.0147 22.6066L20.5607 13.0607ZM0.5 13.5H19.5V10.5H0.5V13.5Z" fill="black"/>
+</svg></a>
+                  </div>
+                </div>
+                <div class="timeline__item-reminder">
+                  <svg width="23" height="16" viewBox="0 0 23 16" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.07062 12.7279L0 5.65693L2.82843 2.82851L9.89923 9.89931L19.7986 0L22.627 2.82843L12.7279 12.728L9.89951 15.5564L9.89905 15.5563L7.07062 12.7279Z" fill="black"/>
+</svg>Я спикер
+                </div>
+              </div>
+              <div class="timeline__item-content" style="background-color: #42FFBB">
+                <div class="timeline__item-wrapper">
+                  <div class="timeline__item-lside"><img src="static/img/volume.svg">
+                    <div class="timeline__item-lside_title">Псковский международный медиафорум</div>
+                  </div>
+                  <div class="timeline__item-rside"><a class="link timeline__item-rside_title" href="#">Псковский экономический форум</a>
+                    <div class="timeline__item-rside_time"><img src="static/img/clock.png">10:30-11:30</div>
+                    <div class="timeline__item-rside_info">
+                      <div class="timeline__item-rside_type">Онлайн-форум</div>
+                      <div class="timeline__item-rside_moderate">Модерирует: Иван Иванов</div>
+                    </div>
+                    <div class="timeline__item-rside_descr">Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе. Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным.</div><a class="link timeline__item-rside_link" href="#">
+                      Ссылка на трансляцию<svg width="21" height="24" viewBox="0 0 21 24" fill="none">
+<path d="M20.5607 13.0607C21.1464 12.4749 21.1464 11.5251 20.5607 10.9393L11.0147 1.3934C10.4289 0.807611 9.47919 0.807611 8.8934 1.3934C8.30761 1.97919 8.30761 2.92893 8.8934 3.51472L17.3787 12L8.8934 20.4853C8.30761 21.0711 8.30761 22.0208 8.8934 22.6066C9.47919 23.1924 10.4289 23.1924 11.0147 22.6066L20.5607 13.0607ZM0.5 13.5H19.5V10.5H0.5V13.5Z" fill="black"/>
+</svg></a>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="timeline__item">
               <div class="timeline__item-info">
                 <div class="timeline__item-dot"></div>
-                <h2 class="font-size--45">12 марта</h2>
+                <h2 class="font-size--45">12 марта 2020</h2>
               </div>
-              <div class="timeline__item-content" style="background-color: #FFE601">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</div>
+              <div class="timeline__item-content" style="background-color: #FFE601">
+                <div class="timeline__item-wrapper">
+                  <div class="timeline__item-lside"><img src="static/img/volume.svg">
+                    <div class="timeline__item-lside_title">Псковский международный медиафорум</div>
+                  </div>
+                  <div class="timeline__item-rside"><a class="link timeline__item-rside_title" href="#">Псковский экономический форум</a>
+                    <div class="timeline__item-rside_time"><img src="static/img/clock.png">10:30-11:30</div>
+                    <div class="timeline__item-rside_info">
+                      <div class="timeline__item-rside_type">Онлайн-форум</div>
+                      <div class="timeline__item-rside_moderate">Модерирует: Иван Иванов</div>
+                    </div>
+                    <div class="timeline__item-rside_descr">Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе. Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным.</div><a class="link timeline__item-rside_link" href="#">
+                      Ссылка на трансляцию<svg width="21" height="24" viewBox="0 0 21 24" fill="none">
+<path d="M20.5607 13.0607C21.1464 12.4749 21.1464 11.5251 20.5607 10.9393L11.0147 1.3934C10.4289 0.807611 9.47919 0.807611 8.8934 1.3934C8.30761 1.97919 8.30761 2.92893 8.8934 3.51472L17.3787 12L8.8934 20.4853C8.30761 21.0711 8.30761 22.0208 8.8934 22.6066C9.47919 23.1924 10.4289 23.1924 11.0147 22.6066L20.5607 13.0607ZM0.5 13.5H19.5V10.5H0.5V13.5Z" fill="black"/>
+</svg></a>
+                  </div>
+                </div>
+                <div class="timeline__item-reminder">
+                  <svg width="23" height="16" viewBox="0 0 23 16" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.07062 12.7279L0 5.65693L2.82843 2.82851L9.89923 9.89931L19.7986 0L22.627 2.82843L12.7279 12.728L9.89951 15.5564L9.89905 15.5563L7.07062 12.7279Z" fill="black"/>
+</svg>Я спикер
+                </div>
+              </div>
             </li>
             <li class="timeline__item">
               <div class="timeline__item-info">
                 <div class="timeline__item-dot"></div>
-                <h2 class="font-size--45">10 апреля</h2>
+                <h2 class="font-size--45">10 апреля 2020</h2>
               </div>
-              <div class="timeline__item-content" style="background-color: #F49ED7">Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim.</div>
+              <div class="timeline__item-content" style="background-color: #F49ED7">
+                <div class="timeline__item-wrapper">
+                  <div class="timeline__item-lside"><img src="static/img/volume.svg">
+                    <div class="timeline__item-lside_title">Псковский международный медиафорум</div>
+                  </div>
+                  <div class="timeline__item-rside"><a class="link timeline__item-rside_title" href="#">Псковский экономический форум</a>
+                    <div class="timeline__item-rside_time"><img src="static/img/clock.png">10:30-11:30</div>
+                    <div class="timeline__item-rside_info">
+                      <div class="timeline__item-rside_type">Онлайн-форум</div>
+                      <div class="timeline__item-rside_moderate">Модерирует: Иван Иванов</div>
+                    </div>
+                    <div class="timeline__item-rside_descr">Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным. Корчое будет текст о спикере и все в таком ключе. Здесь будет разъясняющий суть подзаголовок который может быть абсолютно любой длинным.</div><a class="link timeline__item-rside_link" href="#">
+                      Ссылка на трансляцию<svg width="21" height="24" viewBox="0 0 21 24" fill="none">
+<path d="M20.5607 13.0607C21.1464 12.4749 21.1464 11.5251 20.5607 10.9393L11.0147 1.3934C10.4289 0.807611 9.47919 0.807611 8.8934 1.3934C8.30761 1.97919 8.30761 2.92893 8.8934 3.51472L17.3787 12L8.8934 20.4853C8.30761 21.0711 8.30761 22.0208 8.8934 22.6066C9.47919 23.1924 10.4289 23.1924 11.0147 22.6066L20.5607 13.0607ZM0.5 13.5H19.5V10.5H0.5V13.5Z" fill="black"/>
+</svg></a>
+                  </div>
+                </div>
+                <div class="timeline__item-reminder">
+                  <svg width="23" height="16" viewBox="0 0 23 16" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.07062 12.7279L0 5.65693L2.82843 2.82851L9.89923 9.89931L19.7986 0L22.627 2.82843L12.7279 12.728L9.89951 15.5564L9.89905 15.5563L7.07062 12.7279Z" fill="black"/>
+</svg>Я спикер
+                </div>
+              </div>
             </li>
           </ul>
         </div>
