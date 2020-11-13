@@ -511,23 +511,3 @@ $('.modal-close').on('click', function () {
 $('.modal-content_actions-buttonJS').on('click', function () {
   $(this).closest('.modal-wrapper').fadeOut();
 })
-
-$('.authFormJS').validate({
-  rules: {
-    name: {
-      required: true,
-      minlength: 3,
-    },
-    email: {
-      required: true,
-      email: true
-    }
-  },
-  messages: {
-    name: "Минимальная длина 2 символа",
-    email: "введите email"
-  },
-  submitHandler: function() {
-    console.log()
-  }
-});
