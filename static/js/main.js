@@ -525,8 +525,42 @@ $(document).ready(function(){
 
 
 
+// оставить отзыв
+$('.sendFeedbackJS').on('click', function (e) {+
+    e.preventDefault();
+  $('.feedbacks-modalJS').fadeIn();
+})
+
+$('.feedbackForm').on('submit', function (e) {
+  e.preventDefault();
+  const $textarea = $(this).find('textarea');
+
+  if(!$textarea.val().trim()){
+    $textarea.parent().addClass('is-invalid');
+    setTimeout(() => $textarea.parent().removeClass('is-invalid'), 2000);
+    return
+  }
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    type: "POST",
+    data: 'data'
+  }).done(function (res) {
+    $('.feedbacks-modalJS').fadeOut();
+    $('.modalFeedbackCongratsJS ').fadeIn();
+    $textarea.val('');
+  });
+})
 
 
 
+// боковое меню
 
+$('.hamburger-button').on('click', function () {
+  $('.mobileMenuJS').fadeIn();
+  $('.mobile-container').slideToggle();
+});
 
+$('.mobile-container_close').on('click', function () {
+  $('.mobile-container').slideToggle();
+  $('.mobileMenuJS').fadeOut();
+});

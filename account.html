@@ -2,10 +2,10 @@
 <html lang="ru-Ru">
   <head>
     <meta charset="utf-8">
-    <title> Страница новостей
+    <title> Страница аккаунта
     </title>
-    <meta name="description" content="описание страницы отзывов">
-    <meta name="keywords" content="ключи страницы отзывов">
+    <meta name="description" content="описание страницы аккаунта">
+    <meta name="keywords" content="ключи страницы аккаунта">
     <meta name="robots" content="index,follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,85 +31,59 @@
     <main> 
       <div class="breadcrumbs"><a class="link breadcrumbs_link" href="#">Главная </a><span class="breadcrumbs_separator">•</span><a class="link breadcrumbs_link" href="#">Следующая</a><span class="breadcrumbs_separator">•</span><span class="breadcrumbs_link--last">Последняя в цепочке</span></div>
       <div class="container">
-        <h1 class="font-size--80 heading-title--mb40">Новости</h1>
-      </div>
-      <div class="container">
-        <div class="filters-container"><span class="filters-title">Показывать</span>
-          <div class="filters-wrapper">
-            <div class="select-controller">
-              <select class="custom-select" data-type="months">
-                <option value="0">Все месяцы</option>
-                <option value="1">Январь</option>
-                <option value="2">Февраль</option>
-                <option value="3">Март</option>
-                <option value="4">Апрель</option>
-                <option value="5">Май</option>
-                <option value="6">Июнь</option>
-                <option value="7">Июль</option>
-                <option value="8">Август</option>
-                <option value="9">Сентябрь</option>
-                <option value="10">Октябрь</option>
-                <option value="11">Ноябрь</option>
-                <option value="12">Декабрь</option>
-              </select>
+        <h1 class="font-size--45 heading-title--mb40">Настройки аккаунта</h1>
+        <div class="account-container">
+          <div class="account-avatar" style="background-image: url('static/img/question.svg')"><img src="static/img/person.png">
+            <label class="account-avatar_input"><svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13 17V30H17V17H30V13H17V0H13V13H0V17H13Z"/>
+</svg>
+              <input type="file">
+            </label>
+          </div>
+          <div class="account-fields">
+            <div class="account_personal-block">
+              <h3>Личные данные</h3>
+              <form>
+                <div class="error-message">Тут показать ошибки</div>
+                <div class="cols">
+                  <div class="form-control cols__item--3">
+                    <input type="text" name="name" placeholder="Фамилия">
+                  </div>
+                  <div class="form-control cols__item--3">
+                    <input type="text" name="name" placeholder="Имя"><span class="error-message"></span>
+                  </div>
+                  <div class="form-control cols__item--3">
+                    <input type="text" name="name" placeholder="Отчество"><span class="error-message"></span>
+                  </div>
+                  <div class="form-control cols__item--3">
+                    <input type="text" name="name" placeholder="Должность"><span class="error-message"></span>
+                  </div>
+                  <div class="form-control cols__item--3">
+                    <input type="email" name="name" placeholder="Email"><span class="error-message"></span>
+                  </div>
+                </div>
+                <button class="action action--padding">Сохранить</button>
+              </form>
+            </div>
+            <div class="account_password-block">
+              <h3>Смена пароля</h3>
+              <form>
+                <div class="error-message">Тут показать ошибки</div>
+                <div class="cols">
+                  <div class="form-control cols__item--3">
+                    <input type="password" name="name" placeholder="Старый пароль"><span class="error-message"></span>
+                  </div>
+                  <div class="form-control cols__item--3">
+                    <input type="password" name="name" placeholder="Новый пароль"><span class="error-message"></span>
+                  </div>
+                  <div class="form-control cols__item--3">
+                    <input type="password" name="name" placeholder="Повторите новый пароль"><span class="error-message"></span>
+                  </div>
+                </div>
+                <button class="action action--padding">Изменить</button>
+              </form>
             </div>
           </div>
-          <div class="filters-wrapper">
-            <div class="select-controller">
-              <select class="custom-select" data-type="years">
-                <option value="0">Все года</option>
-                <option value="1">2012</option>
-                <option value="2">2013</option>
-                <option value="3">2014</option>
-                <option value="4">2015</option>
-                <option value="5">2016</option>
-                <option value="6">2017</option>
-                <option value="7">2018</option>
-                <option value="8">2019</option>
-                <option value="9">2020</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container"> 
-        <div class="news-block"><a class="news-card" href="#"><img src="static/img/news1.png">
-            <div class="news-card_block">
-              <div class="news-card_block-date">11/09</div>
-              <div class="news-card_block-title">В школах Псковской области стартовали Дни экологии</div><svg width="63" height="38" viewBox="0 0 63 38" fill="none">
-<path d="M61.7678 20.7678C62.7441 19.7915 62.7441 18.2085 61.7678 17.2322L45.8579 1.32233C44.8816 0.34602 43.2986 0.34602 42.3223 1.32233C41.346 2.29864 41.346 3.88155 42.3223 4.85786L56.4645 19L42.3223 33.1421C41.346 34.1184 41.346 35.7014 42.3223 36.6777C43.2986 37.654 44.8816 37.654 45.8579 36.6777L61.7678 20.7678ZM0 21.5L60 21.5V16.5L0 16.5L0 21.5Z" fill="black"/>
-</svg>
-            </div></a><a class="news-card" href="#"><img src="static/img/news1.png">
-            <div class="news-card_block">
-              <div class="news-card_block-date">11/09</div>
-              <div class="news-card_block-title">В школах Псковской области стартовали Дни экологии</div><svg width="63" height="38" viewBox="0 0 63 38" fill="none">
-<path d="M61.7678 20.7678C62.7441 19.7915 62.7441 18.2085 61.7678 17.2322L45.8579 1.32233C44.8816 0.34602 43.2986 0.34602 42.3223 1.32233C41.346 2.29864 41.346 3.88155 42.3223 4.85786L56.4645 19L42.3223 33.1421C41.346 34.1184 41.346 35.7014 42.3223 36.6777C43.2986 37.654 44.8816 37.654 45.8579 36.6777L61.7678 20.7678ZM0 21.5L60 21.5V16.5L0 16.5L0 21.5Z" fill="black"/>
-</svg>
-            </div></a><a class="news-card" href="#"><img src="static/img/news1.png">
-            <div class="news-card_block">
-              <div class="news-card_block-date">11/09</div>
-              <div class="news-card_block-title">В школах Псковской области стартовали Дни экологии</div><svg width="63" height="38" viewBox="0 0 63 38" fill="none">
-<path d="M61.7678 20.7678C62.7441 19.7915 62.7441 18.2085 61.7678 17.2322L45.8579 1.32233C44.8816 0.34602 43.2986 0.34602 42.3223 1.32233C41.346 2.29864 41.346 3.88155 42.3223 4.85786L56.4645 19L42.3223 33.1421C41.346 34.1184 41.346 35.7014 42.3223 36.6777C43.2986 37.654 44.8816 37.654 45.8579 36.6777L61.7678 20.7678ZM0 21.5L60 21.5V16.5L0 16.5L0 21.5Z" fill="black"/>
-</svg>
-            </div></a><a class="news-card" href="#"><img src="static/img/news3.png">
-            <div class="news-card_block">
-              <div class="news-card_block-date">11/09</div>
-              <div class="news-card_block-title">В школах Псковской области стартовали Дни экологии</div><svg width="63" height="38" viewBox="0 0 63 38" fill="none">
-<path d="M61.7678 20.7678C62.7441 19.7915 62.7441 18.2085 61.7678 17.2322L45.8579 1.32233C44.8816 0.34602 43.2986 0.34602 42.3223 1.32233C41.346 2.29864 41.346 3.88155 42.3223 4.85786L56.4645 19L42.3223 33.1421C41.346 34.1184 41.346 35.7014 42.3223 36.6777C43.2986 37.654 44.8816 37.654 45.8579 36.6777L61.7678 20.7678ZM0 21.5L60 21.5V16.5L0 16.5L0 21.5Z" fill="black"/>
-</svg>
-            </div></a></div>
-      </div>
-      <div class="container"> 
-        <div class="pagination-wrapper">
-          <div class="pagination"><a class="pagination_item" href="#"><svg viewBox="0 0 612 612" width="20px" height="25px" y="0px" x="0px">
-<path d="M124.172,305.975L342.365,87.781c20.079-20.079,20.079-52.644,0-72.722c-20.079-20.079-52.644-20.079-72.723,0L15.062,269.639c-20.079,20.079-20.079,52.644,0,72.723l254.58,254.58c20.079,20.078,52.644,20.078,72.723,0c20.079-20.079,20.079-52.644,0-72.723L124.172,305.975z M431.395,305.694l165.371-165.982c20.308-20.359,20.308-53.408,0-73.768c-20.309-20.359-53.204-20.359-73.513,0L321.139,268.823c-20.309,20.359-17.047,35.266,3.032,55.345L523.253,545.47c20.309,20.359,53.204,20.359,73.513,0c20.308-20.359,20.308-53.408,0-73.768L431.395,305.694z"/>
-</svg></a><a class="pagination_item" href="#"><svg width="14" height="24" viewBox="0 0 14 24" fill="none">
-<path d="M0.940121 13.0429C0.354335 12.4571 0.354335 11.5074 0.940121 10.9216L10.4861 1.37564C11.0718 0.78985 12.0216 0.78985 12.6074 1.37564C13.1932 1.96142 13.1932 2.91117 12.6074 3.49696L4.1221 11.9822L12.6074 20.4675C13.1932 21.0533 13.1932 22.0031 12.6074 22.5888C12.0216 23.1746 11.0718 23.1746 10.4861 22.5888L0.940121 13.0429ZM2.80078 13.4822H2.00078V10.4822H2.80078V13.4822Z" fill="black"/>
-</svg></a><a class="pagination_item" href="#">1</a><a class="pagination_item--active pagination_item" href="#">2</a><a class="pagination_item" href="#">3</a><a class="pagination_item" href="#">4</a><span class="pagination_item pagination_item--show-more">...</span><a class="pagination_item" href="#"><svg width="14" height="24" viewBox="0 0 14 24" fill="none">
-<path d="M13.0599 13.0429C13.6457 12.4571 13.6457 11.5074 13.0599 10.9216L3.51394 1.37564C2.92815 0.78985 1.9784 0.78985 1.39262 1.37564C0.80683 1.96142 0.80683 2.91117 1.39262 3.49696L9.8779 11.9822L1.39262 20.4675C0.80683 21.0533 0.80683 22.0031 1.39262 22.5888C1.9784 23.1746 2.92815 23.1746 3.51394 22.5888L13.0599 13.0429ZM11.1992 13.4822H11.9992V10.4822H11.1992V13.4822Z" fill="black"/>
-</svg></a><a class="pagination_item" href="#"><svg width="20" height="25" viewBox="0 0 612.02 612.02">
-<path d="M596.96,269.674L342.381,15.094c-20.079-20.079-52.644-20.079-72.723,0c-20.079,20.079-20.079,52.644,0,72.723     L487.852,306.01L269.658,524.202c-20.079,20.079-20.079,52.644,0,72.723s52.644,20.079,72.723,0L596.96,342.346C617.039,322.317,617.039,289.753,596.96,269.674z M290.858,254.258L88.744,41.238c-20.309-21.378-53.204-21.378-73.513,0s-20.309,56.058,0,77.462l165.371,174.289L15.231,467.278c-20.309,21.379-20.309,56.083,0,77.462s53.204,21.379,73.513,0L290.858,331.72C311.167,310.342,311.167,275.662,290.858,254.258z"/>
-</svg></a></div>
         </div>
       </div>
     </main>

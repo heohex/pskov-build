@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="static/css/main.css">
@@ -19,11 +20,11 @@
       <div class="header-container"><a class="logo" href="/">Конгресс-холл
           <div class="logo_circle logo_circle--red"></div></a>
         <nav class="menu">
-          <div class="menu_links"><a class="link menu_link menu_link--active" href="#">Мероприятия</a><a class="link menu_link" href="#">Новости</a></div>
+          <div class="menu_links"><a class="link menu_link menu_link--active" href="#">Мероприятия</a><a class="link menu_link" href="#">Новости</a></div><!--
           <div class="menu_enter-group"><img src="static/img/round.svg"><a class="link menu_link" href="#">Вход</a>
             <div class="menu_enter-group_separator"></div><a class="link menu_link" href="#">Регистрация  </a>
-          </div><!--           
-          <div class="menu_entered-group"><a class="link menu_link" href="#">Александр С</a><a class="link hamburger-button" href="#"><span class="hamburger-button_first"></span><span class="hamburger-button_second"></span></a></div>-->
+          </div>-->
+          <div class="menu_entered-group"><a class="link menu_link" href="#">Александр С</a><a class="link hamburger-button" href="#"><span class="hamburger-button_first"></span><span class="hamburger-button_second"></span></a></div>
         </nav>
       </div>
     </header>
@@ -252,7 +253,7 @@
               </div>
             </div>
           </div>
-          <div class="container content--flex-center"><a class="action-black" href="#">Оставить отзыв</a></div>
+          <div class="container content--flex-center"><a class="action-black sendFeedbackJS" href="#">Оставить отзыв</a></div>
         </div>
       </section>
       <div class="container">
@@ -318,6 +319,48 @@
             <button class="action modal-content_actions-button modal-content_actions-buttonJS">Понятно</button>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="modal-wrapper modalFeedbackCongratsJS">
+      <div class="modal-container">
+        <div class="modal-close"><span>&#10006;</span></div>
+        <div class="modal-content">
+          <div class="modal-content_title">
+            <h1 class="font-size--45"> Отправлен!</h1>
+          </div>
+          <div class="modal-content_description">Ваш отзыв появится после модерации.</div>
+          <div class="modal-content_actions">
+            <button class="action modal-content_actions-button modal-content_actions-buttonJS">Понятно</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrapper feedbacks-modalJS">
+      <div class="modal-container">
+        <div class="modal-close"><span>&#10006;</span></div>
+        <div class="modal-content">
+          <div class="modal-content_title">
+            <h1 class="font-size--45 heading-title--mb70">Оставить отзыв</h1>
+          </div>
+          <div class="modal-content_description">
+            <form class="feedbackForm" action="#">
+              <div class="form-control">
+                <textarea class="custom-textarea" name="feedback" placeholder="Ваш отзыв"></textarea>
+              </div>
+              <div class="modal-content_actions">
+                <button class="action modal-content_actions-button">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrapper mobileMenuJS">
+      <div class="mobile-container"><a class="mobile-container_close link" href="#">
+          <svg width="13" height="14" viewBox="0 0 13 14" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.95024 7.00069L0.00123739 11.9497L1.41545 13.3639L6.36445 8.4149L11.3137 13.3642L12.7279 11.9499L7.77867 7.00069L12.7292 2.0502L11.3149 0.635986L6.36445 5.58648L1.41421 0.636237L0 2.05045L4.95024 7.00069Z"/>
+</svg>Закрыть</a>
+        <div class="mobile-menu"><a class="link mobile-menu_link mobile-menu_link--active" href="#">Мои мероприятия</a><a class="link mobile-menu_link" href="#">Настройки аккаунта</a><a class="link mobile-menu_link" href="#">Выход</a></div>
       </div>
     </div>
     <script src="static/js/libs.min.js"></script>
