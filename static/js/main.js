@@ -209,7 +209,7 @@ $(document).ready(function () {
   $('.js-videoWrapper').each(function (index,item) {
     const iframe = $(item).find('.js-videoIframe');
     const embedCode = youtubeUrlParse(iframe.data('origin'));
-    $(this).find('button').css('background-image', `url(https://img.youtube.com/vi/${embedCode}/maxresdefault.jpg)`);
+    $(this).find('button').css('background-image', `url(https://img.youtube.com/vi/${embedCode}/sddefault.jpg)`);
     const youtubeLink = `https://www.youtube.com/embed/${embedCode}?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white`;
     $(this).find('.js-videoIframe').data('src', youtubeLink);
   })
