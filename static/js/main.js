@@ -90,9 +90,9 @@ function initEmptySlide(slidesCollection, slidenumber = 0) {
 }
 
 //реагируем на изменения экрана, но нужно было сделать через debounce
-$(window).resize(function () {
-  initEmptySlide($partnersSlide);
-});
+// $(window).resize(function () {
+//   initEmptySlide($partnersSlide);
+// });
 
 function setProgress(next, all) {
   const calc = ((next + 1) / all) * 100;
@@ -112,11 +112,11 @@ $partnersSlider.on("init reInit afterChange", function (
 });
 
 $(document).ready(function () {
-  initEmptySlide($partnersSlide);
+  // initEmptySlide($partnersSlide);
   $partnersSlider.slick({
     dots: false,
     focusOnSelect: false,
-    infinite: false,
+    infinite: true,
     variableWidth: true,
     slidesToShow: 1,
     slidesToScroll: 1,
